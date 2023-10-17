@@ -1,5 +1,6 @@
 import { signOut } from "next-auth/react";
 import React from "react";
+import Image from "next/image";
 
 import useCurrentUser from "@/hooks/useCurrentUser";
 import { AiOutlineCrown } from "react-icons/ai";
@@ -21,7 +22,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
       <div className="flex flex-col gap-3">
         <div className="px-3 group item flex flex-row gap-3 items-center w-full">
           <div>
-            <img
+            <Image
               className="w-8 rounded-full "
               src="/assets/images/one-piece-chopper-3.png"
               alt=""
