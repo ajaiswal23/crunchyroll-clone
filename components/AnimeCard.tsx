@@ -20,7 +20,7 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ data }) => {
   );
 
   return (
-    <div className="group bg-zinc-900 col-span relative h-[70vw] sm:h-[40vh] md:h-[33vh]">
+    <div className="group bg-zinc-900 col-span relative h-[70vw] sm:h-[40vh]">
       <div
         className="cursor-pointer object-cover transition duration
         shadow-xl rounded-md  w-full h-full"
@@ -30,7 +30,7 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ data }) => {
           src={data.thumbnailUrl}
           alt="Anime"
           draggable={false}
-          className="cursor-pointer object-fill w-full h-full"
+          className="cursor-pointer object-cover w-full h-[70vw] sm:h-[40vh] rounded-t-2xl"
         />
 
         <div className="bg-zinc-800 p-2 lg:p-4 w-full rounded-b-2xl">
