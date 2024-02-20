@@ -1,9 +1,11 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 
-import { BsBookmark, BsChevronCompactDown } from "react-icons/bs";
+import { BsBookmark } from "react-icons/bs";
 import { SlMagnifier } from "react-icons/sl";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { FaAngleDown } from "react-icons/fa6";
+
 
 import AccountMenu from "@/components/AccountMenu";
 import MobileMenu from "@/components/MobileMenu";
@@ -68,7 +70,7 @@ const Navbar = () => {
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-full overflow-hidden">
               <Image src="/assets/images/one-piece-chopper-3.png" height={40} width={40} alt="" />
             </div>
-            <BsChevronCompactDown
+            <FaAngleDown
               className={`w-4 text-white fill-white md:mr-4 transition ${
                 showAccountMenu ? "rotate-180" : "rotate-0"
               }`}

@@ -44,11 +44,10 @@ const {isOpen, closeModal} = useInfoModalStore();
       </main>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <section className="pt-16 pb-10
-      ">
+      <section className="pt-16 pb-10">
         <Hero />
       </section>
-      <div className="pb-40 ">
+      <div className="">
         <AnimeList title="Top Picks for You" data={anime} />
       </div>
       <div className="pb-40 ">

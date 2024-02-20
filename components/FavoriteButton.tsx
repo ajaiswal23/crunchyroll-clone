@@ -43,9 +43,9 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ animeId }) => {
   return (
     <div
       onClick={toggleFavorites}
-      className="cursor-pointer group/item w-8 h-8 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-neutral-300"
+      className="cursor-pointer group/item w-8 h-8 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-green-400"
     >
-      <Icon className="text-white group-hover/item:text-neutral-300 w-4 lg:w-6" />
+      <Icon className="text-white group-hover/item:text-green-400 w-4 lg:w-6" />
     </div>
   );
 };
