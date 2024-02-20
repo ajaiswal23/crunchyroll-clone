@@ -44,7 +44,8 @@ const {isOpen, closeModal} = useInfoModalStore();
       </main>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
-      <section className="pt-16 pb-20">
+      <section className="pt-16 pb-10
+      ">
         <Hero />
       </section>
       <div className="pb-40 ">

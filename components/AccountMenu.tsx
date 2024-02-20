@@ -25,6 +25,8 @@ const AccountMenu: React.FC<AccountMenuProps> = ({ visible }) => {
             <Image
               className="w-8 rounded-full "
               src="/assets/images/one-piece-chopper-3.png"
+              height={40}
+              width={40}
               alt=""
             />
           </div>

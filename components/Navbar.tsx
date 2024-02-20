@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
+import Image from "next/image";
 
 import { BsBookmark, BsChevronCompactDown } from "react-icons/bs";
-// import { FaMagnifyingGlass } from "react-icons/fa";
 import { SlMagnifier } from "react-icons/sl";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -32,18 +32,18 @@ const Navbar = () => {
         {/* hamgurger menu */}
         <div
           onClick={toggleMobileMenu}
-          className="lg:hidden flex flex-row items-center gap-2 ml-8 cursor-pointer relative"
+          className="lg:hidden flex flex-row items-center gap-2 cursor-pointer relative"
         >
           <RxHamburgerMenu
             className={`w-4 mr-4 text-white fill-white transition ${
-              showMobileMenu ? "rotate-180" : "rotate-0"
+              showMobileMenu ? "rotate-90" : "rotate-0"
             }`}
           />
           <MobileMenu visible={showMobileMenu} />
         </div>
         {/* hamgurger menu end */}
 
-        <img src="/assets/images/Crunchyroll.png" className="h-7" alt="Logo" />
+        <Image src="/assets/images/Crunchyroll.png" height={20} width={150} alt="Logo" />
 
         <div className="flex-row ml-8 gap-7 hidden lg:flex">
           <NavbarItem label="Browse" active />
@@ -66,7 +66,7 @@ const Navbar = () => {
             className="flex flex-row items-center gap-2 cursor-pointer relative"
           >
             <div className="w-6 h-6 lg:w-10 lg:h-10 rounded-full overflow-hidden">
-              <img src="/assets/images/one-piece-chopper-3.png" alt="" />
+              <Image src="/assets/images/one-piece-chopper-3.png" height={40} width={40} alt="" />
             </div>
             <BsChevronCompactDown
               className={`w-4 text-white fill-white md:mr-4 transition ${
