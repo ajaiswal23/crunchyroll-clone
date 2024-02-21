@@ -35,12 +35,7 @@ const {isOpen, closeModal} = useInfoModalStore();
     <>
       <main className="max-container">
         <title>Crunchyroll Clone</title>
-        <link
-          rel="icon"
-          href="/assets/icons/crunchyroll.svg"
-          type="image/svg+xml"
-          sizes="32x32"
-        />
+        <link rel="icon" href="/favicon.ico" />
       </main>
       <InfoModal visible={isOpen} onClose={closeModal} />
       <Navbar />
