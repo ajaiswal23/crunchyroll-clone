@@ -1,6 +1,7 @@
 import React, { useCallback } from "react";
 import { useRouter } from "next/router";
 import { FaAngleDown } from "react-icons/fa6";
+import Image from "next/image";
 
 import { AnimeInterface } from "@/types";
 import FavoriteButton from "./FavoriteButton";
@@ -22,12 +23,14 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ data }) => {
   return (
     <div className="group bg-zinc-900">
       <div className="cursor-pointer w-64 h-full group/button">
-        <img
+        <Image
           onClick={redirectToWatch}
           src={data.thumbnailUrl}
-          alt="Anime"
+          alt={data.title}
+          width={256}
+          height={360}
           draggable={false}
-          className="cursor-pointer object-contain"
+          className="cursor-pointer object-contain rounded-t-2xl"
         />
 
         <div className="bg-zinc-800 p-2 lg:p-4 w-full rounded-b-2xl">
