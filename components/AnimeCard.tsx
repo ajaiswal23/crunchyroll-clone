@@ -31,26 +31,27 @@ const AnimeCard: React.FC<AnimeCardProps> = ({ data }) => {
         />
 
         <div className="bg-zinc-800 p-2 lg:p-4 w-full rounded-b-2xl">
-          <div className="flex pt-2 ">
-            
+          <div>
+            <p className="text-xl truncate text-green-400 font-semibold">
+              <span onClick={() => openModal(data?.id)}>{data.title}</span>
+            </p>
+            <div className="flex flex-row gap-2 items-center">
+              <p className="text-white text-[10px] lg:text-sm">
+                {data.duration}
+              </p>
+            </div>
+          </div>
+          <div className="flex pt-2 items-center justify-between">
             <FavoriteButton animeId={data.id} />
 
             <div
               onClick={() => openModal(data?.id)}
-              className="cursor-pointer  group/item w-8 h-8 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-green-400"
+              className="group/item w-8 h-8 lg:w-10 lg:h-10 border-white border-2 rounded-full flex justify-center items-center transition hover:border-green-400"
             >
               <FaAngleDown className="text-white text-2xl pt-1 group-hover/item:text-green-400 w-6" />
             </div>
           </div>
-          <p className="sm:text-lg max-md:text-center text-green-400 font-semibold pt-4">
-            <span onClick={() => openModal(data?.id)}>{data.title}</span>
-          </p>
-          <div className="flex flex-row gap-2 items-center">
-            <p className="text-white text-[10px] lg:text-sm">{data.duration}</p>
-          </div>
-          <div className="flex flex-row items-center gap-2 mt-4 text-[8px] text-white lg:text-sm">
-            <p>{data.genre}</p>
-          </div>
+
         </div>
       </div>
     </div>

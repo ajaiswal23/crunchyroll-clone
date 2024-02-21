@@ -47,7 +47,7 @@ const AnimeList: React.FC<AnimeListProps> = ({ data, title }) => {
         </button>
       </div>
 
-      <div ref={scroll} className="flex overflow-x-scroll scroll-smooth pb-7 gap-5 ">
+      <div ref={scroll} className="flex overflow-x-scroll scroll-smooth pb-7 gap-8 ">
         {data.map((anime) => (
           <AnimeCard key={anime.id} data={anime} />
         ))}
