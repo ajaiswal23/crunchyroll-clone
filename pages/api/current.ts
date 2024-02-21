@@ -14,6 +14,7 @@ export default async function handler(
 
     return res.status(200).json(currentUser);
   } catch (error) {
+    console.log("Error fetching current user")
     console.log(error);
     return res.status(500).end();
   }

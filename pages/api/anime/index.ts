@@ -1,6 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import prismadb from "@/libs/prismadb";
 import serverAuth from "@/libs/serverAuth";
+import { toastConfig } from "@/libs/notification";
+import { toast } from "react-toastify"; 
 
 export default async function handler(
   req: NextApiRequest,
@@ -17,6 +19,7 @@ export default async function handler(
 
     return res.status(200).json(anime);
   } catch (error) {
+    toast.error("Error fetching any Anime", toastConfig);
     console.log({ error });
     return res.status(500).end();
   }
